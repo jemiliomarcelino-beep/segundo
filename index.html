@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8d3157">
+  <title>Nosso Cantinho ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">♥</span> Nosso Cantinho</a>
+    <nav><a href="#inicio">Início</a><a href="#memorias">Memórias</a><a href="#mensagens">Mensagens</a></nav>
+    <button id="themeBtn" class="icon-btn" aria-label="Mudar tema" title="Mudar tema">☾</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow">UM LUGAR SÓ NOSSO</span>
+        <h1>As nossas memórias,<br><em>o nosso amor.</em></h1>
+        <p>Um cantinho especial para guardar os momentos, as músicas e as palavras que contam a nossa história.</p>
+        <a class="primary-btn" href="#memorias">Guardar uma memória <span>♡</span></a>
+      </div>
+      <div class="hero-art" aria-label="Ilustração romântica">
+        <div class="sun"></div><div class="heart h1">♥</div><div class="heart h2">♥</div>
+        <div class="art-card"><span>✦</span><strong>Tu + Eu</strong><small>uma história bonita</small></div>
+        <div class="spark s1">✧</div><div class="spark s2">✦</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong id="countMedia">0</strong><span>memórias guardadas</span></div>
+      <div><strong id="countNotes">0</strong><span>mensagens de amor</span></div>
+      <div><strong>∞</strong><span>motivos para sorrir</span></div>
+    </section>
+
+    <section class="section" id="memorias">
+      <div class="section-heading">
+        <div><span class="eyebrow">A VOSSA HISTÓRIA</span><h2>Guardar uma memória</h2></div>
+        <p>Fotos, vídeos, músicas e áudios — tudo num só lugar.</p>
+      </div>
+      <div class="upload-grid">
+        <label class="upload-card" for="photoInput"><span class="upload-icon">▧</span><strong>Fotografias</strong><small>Momentos para recordar</small><span class="mini-btn">Adicionar fotos</span></label>
+        <input id="photoInput" type="file" accept="image/*" multiple hidden>
+        <label class="upload-card" for="videoInput"><span class="upload-icon">▶</span><strong>Vídeos</strong><small>Reviver cada instante</small><span class="mini-btn">Adicionar vídeos</span></label>
+        <input id="videoInput" type="file" accept="video/*" multiple hidden>
+        <label class="upload-card" for="audioInput"><span class="upload-icon">♫</span><strong>Músicas e áudios</strong><small>A voz e as canções especiais</small><span class="mini-btn">Adicionar áudio</span></label>
+        <input id="audioInput" type="file" accept="audio/*" multiple hidden>
+      </div>
+      <div class="section-heading gallery-heading"><div><span class="eyebrow">ÁLBUM PARTILHADO</span><h2>As nossas memórias</h2></div><span id="mediaLabel" class="pill">0 itens</span></div>
+      <div id="gallery" class="gallery"><div class="empty-state"><span>♡</span><h3>A nossa história começa aqui</h3><p>Adiciona a primeira fotografia, vídeo ou áudio.</p></div></div>
+    </section>
+
+    <section class="notes-section" id="mensagens">
+      <div class="notes-intro"><span class="eyebrow">PALAVRAS QUE FICAM</span><h2>Pequenas mensagens,<br><em>grandes sentimentos.</em></h2><p>Escreve uma carta, uma lembrança ou algo bonito para o teu amor.</p><div class="quote">“O melhor lugar do mundo é onde o meu coração encontra o teu.”</div></div>
+      <form id="noteForm" class="note-form">
+        <label for="noteTitle">Título da mensagem</label><input id="noteTitle" maxlength="80" placeholder="Ex.: Para o meu amor..." required>
+        <label for="noteText">A tua mensagem</label><textarea id="noteText" rows="5" maxlength="2000" placeholder="Escreve aqui o que sentes..." required></textarea>
+        <div class="form-bottom"><span id="charCount">0 / 2000</span><button class="primary-btn" type="submit">Guardar mensagem ♡</button></div>
+      </form>
+      <div class="saved-notes-wrap"><h3>Cartas guardadas</h3><div id="notesList" class="notes-list"></div></div>
+    </section>
+    <section class="closing"><span>♥</span><h2>Que a nossa história continue a ser bonita.</h2><p>Feito com carinho, para guardar aquilo que importa.</p></section>
+  </main>
+  <footer><span>Nosso Cantinho © <span id="year"></span></span><span>Um espaço de amor e memórias ♡</span></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
